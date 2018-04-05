@@ -1,9 +1,29 @@
 spring:
   application:
     name: ribbon-consumer
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+hystrix:
+  command:
+    default: 
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+hello-service:
+  ribbon:
+    ConnectTimeout: 250
+    ReadTimeout: 1000
+    OkToRetryOnAllOperations: true
+    MaxAutoRetriesNetServer: 2
+    MaxAutoRetries: 1
 server:
   port: 9000
 eureka:
   client:
     service-url:
       defaultZone: http://eureka-server-1:1111/eureka/,http://erueka-server-2:1112/eureka/
+    fetch-registry: true
+    registry-fetch-interval-seconds: 30

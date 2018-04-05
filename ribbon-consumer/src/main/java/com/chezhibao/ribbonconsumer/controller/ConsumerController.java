@@ -7,6 +7,7 @@
  */
 package com.chezhibao.ribbonconsumer.controller;
 
+import com.chezhibao.ribbonconsumer.service.HelloService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -25,10 +26,10 @@ import javax.annotation.Resource;
 public class ConsumerController {
 
     @Resource
-    private RestTemplate restTemplate;
+    private HelloService helloService;
 
     @RequestMapping("/ribbon-consumer")
     public String helloConsumer(){
-        return restTemplate.getForEntity("http://HELLO-SERVICE/hello",String.class).getBody();
+        return helloService.helloService();
     }
 }

@@ -2,6 +2,11 @@ spring:
   application:
     name: hello-service
 eureka:
+  instance:
+      lease-renewal-interval-in-seconds: 30
+      lease-expiration-duration-in-seconds: 60
   client:
     service-url:
       defaultZone: http://eureka-server-1:1111/eureka/,http://eureka-server-2:1112/eureka/
+    fetch-registry: true
+    registry-fetch-interval-seconds: 30
