@@ -27,6 +27,6 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-server-1:1111/eureka/,http://erueka-server-2:1112/eureka/
+      defaultZone: http://eureka-server-1:1111/eureka/
     fetch-registry: true
     registry-fetch-interval-seconds: 30
