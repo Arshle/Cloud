@@ -13,6 +13,8 @@ spring:
         max-attempts: 5
       profile: dev
       label: master
+      username: chezhibao
+      password: be9e3db7-50db-4bda-8b31-f6b7b093eb16
 server:
   port: 7002
 eureka:
