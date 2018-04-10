@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Arshle/Cloud.git
+          search-paths: config-center/
+          username: Arshle
+          password: 13801584z
+server:
+  port: 7001
