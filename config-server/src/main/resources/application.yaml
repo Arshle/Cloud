@@ -8,7 +8,21 @@ spring:
           uri: https://github.com/Arshle/Cloud.git
           search-paths: config-center/
           username: Arshle
-          password: 13801584z
+          password: xxxxxxxxxx
           basedir: D:\configServer
+        health:
+          repositories:
+            check:
+              name: health-check
+              label: master
+              profiles: default
 server:
   port: 7001
+security:
+  user:
+    name: chezhibao
+    password: be9e3db7-50db-4bda-8b31-f6b7b093eb16
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server-1:1111/eureka/

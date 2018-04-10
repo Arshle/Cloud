@@ -3,8 +3,21 @@ spring:
     name: didispace
   cloud:
     config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      fail-fast: true
+      retry:
+        multiplier: 500
+        max-interval: 1500
+        max-attempts: 5
       profile: dev
       label: master
-      uri: http://localhost:7001/
+      username: chezhibao
+      password: be9e3db7-50db-4bda-8b31-f6b7b093eb16
 server:
   port: 7002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server-1:1111/eureka/

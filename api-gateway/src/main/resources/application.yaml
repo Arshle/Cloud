@@ -7,3 +7,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka-server-1:1111/eureka/
+zuul:
+  routes:
+    config-server: /config/**
