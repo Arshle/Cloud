@@ -9,5 +9,6 @@ spring:
           search-paths: config-center/
           username: Arshle
           password: 13801584z
+          basedir: D:\configServer
 server:
   port: 7001
