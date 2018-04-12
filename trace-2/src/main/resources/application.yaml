@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: trace-2
+  sleuth:
+    sampler:
+      percentage: 1
+server:
+  port: 9102
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server-1:1111/eureka/
